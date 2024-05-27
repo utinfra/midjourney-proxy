@@ -1,16 +1,15 @@
-## Docker 部署教程
-
-1. /xxx/xxx/config目录下创建 application.yml(mj配置项)、banned-words.txt(可选，覆盖默认的敏感词文件)；参考src/main/resources下的文件
-2. 启动容器，映射config目录
+## Docker 배포 튜토리얼
+1. /xxx/xxx/config 디렉토리에 생성 application.yml(mj구성항목)、banned-words.txt(선택항목，민간단어덮어쓰기)；참고 src/main/resources 아래파일
+2. 컨테이너 시작，맵 구성 디렉토리
 ```shell
 docker run -d --name midjourney-proxy \
  -p 8080:8080 \
  -v /xxx/xxx/config:/home/spring/config \
  novicezk/midjourney-proxy:2.6.2
 ```
-3. 访问 `http://ip:port/mj` 查看API文档
+3.  `http://ip:port/mj` 로 들어가서 API문서보기
 
-附: 不映射config目录方式，直接在启动命令中设置参数
+첨부된 구성 디렉터리로 매핑하지 마세요.，시작 명령에서 직접 매개변수 설정
 ```shell
 docker run -d --name midjourney-proxy \
  -p 8080:8080 \
