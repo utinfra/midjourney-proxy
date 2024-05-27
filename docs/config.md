@@ -1,7 +1,7 @@
 ## 설정 항목
 | 변수 이름                     | NOT NULL | 설명                                    |
 |:------------------------------|:--:|:----------------------------------------------|
-| mj.accounts                   | YES | 계정 풀 설정(./config.md#%E8%B4%A6%E5%8F%B7%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)，설정 후 추가 설정이 필요 없습니다 mj.discord |
+| mj.accounts                   | YES | 계정 풀 설정(./config.md#계정 풀 구성 참조)，설정 후 추가 설정이 필요 없습니다 mj.discord |
 | mj.discord.guild-id           | YES  | discord서버ID                                  |
 | mj.discord.channel-id         | YES  | discord채널ID                                   |
 | mj.discord.user-token         | YES  | discord사용자Token                                |
