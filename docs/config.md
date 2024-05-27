@@ -2,7 +2,7 @@
 
 | 变量名                           | 非空 | 描述                                            |
 |:------------------------------|:--:|:----------------------------------------------|
-| mj.accounts                   | 是  | [账号池配置](./config.md#%E8%B4%A6%E5%8F%B7%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)，配置后不需要额外设置mj.discord |
+| mj.accounts                   | 是  | 계정 풀 설정(./config.md#%E8%B4%A6%E5%8F%B7%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)，설정 후 추가 설정이 필요 없습니다 mj.discord |
 | mj.discord.guild-id           | 是  | discord服务器ID                                  |
 | mj.discord.channel-id         | 是  | discord频道ID                                   |
 | mj.discord.user-token         | 是  | discord用户Token                                |
