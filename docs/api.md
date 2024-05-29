@@ -1,28 +1,28 @@
-# API接口说明
+# API인터페이스 설명서
 
-`http://ip:port/mj` 已有api文档，此处仅作补充
+`http://ip:port/mj` 이미 API문서가 있으므로, 여기서 보충자료만 제공함
 
-## 1. 数据结构
+## 1. 데이터구조
 
-### 任务
-| 字段 | 类型 | 示例 | 描述 |
+### 작업
+| Field | Type | 예시 | Description |
 |:-----:|:----:|:----|:----|
-| id | string | 1689231405853400 | 任务ID |
-| action | string | IMAGINE | 任务类型: IMAGINE（绘图）、UPSCALE（选中放大）、VARIATION（选中变换）、REROLL（重新执行）、DESCRIBE（图生文）、BLEAND（图片混合） |
-| status | string | SUCCESS | 任务状态: NOT_START（未启动）、SUBMITTED（已提交处理）、IN_PROGRESS（执行中）、FAILURE（失败）、SUCCESS（成功） |
-| prompt | string | 猫猫 | 提示词 |
-| promptEn | string | Cat | 英文提示词 |
-| description | string | /imagine 猫猫 | 任务描述 |
-| submitTime | number | 1689231405854 | 提交时间 |
-| startTime | number | 1689231442755 | 开始执行时间 |
-| finishTime | number | 1689231544312 | 结束时间 |
-| progress | string | 100% | 任务进度 |
+| id | string | 1689231405853400 | 작업ID |
+| action | string | IMAGINE | 과제유형: IMAGINE（绘图）、UPSCALE（选中放大）、VARIATION（选中变换）、REROLL（重新执行）、DESCRIBE（图生文）、BLEAND（图片混合） |
+| status | string | SUCCESS | 과제상태: NOT_START（未启动）、SUBMITTED（已提交处理）、IN_PROGRESS（执行中）、FAILURE（失败）、SUCCESS（成功） |
+| prompt | string | 고양이 | 힌트,단서 |
+| promptEn | string | Cat | 영어힌트,영어단서 |
+| description | string | /imagine 고양이 | 과제설명 |
+| submitTime | number | 1689231405854 | 제출시간 |
+| startTime | number | 1689231442755 | 시작시간 |
+| finishTime | number | 1689231544312 | 종료시간 |
+| progress | string | 100% | 진행률 |
 | imageUrl | string | https://cdn.discordapp.com/attachments/xxx/xxx/xxxx.png | 生成图片的url, 成功或执行中时有值，可能为png或webp |
 | failReason | string | [Invalid parameter] Invalid value | 失败原因, 失败时有值 |
 | properties | object | {"finalPrompt": "Cat"} | 任务的扩展属性，系统内部使用 |
 
 
-## 2. 任务提交返回
+## 2. 작업 결과
 - code=1: 提交成功，result为任务ID
     ```json
     {
